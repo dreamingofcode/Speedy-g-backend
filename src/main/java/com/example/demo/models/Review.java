@@ -4,16 +4,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
-@Entity//
+@Entity//// This tells Hibernate to make a table out of this class
 public class Review {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    private String name;
+    private Integer index;
+    private String comment;
+    private String client;
+    private Date date;
+    private Integer rating;
+    private String location;
 
-    private String email;
 
     public Integer getId() {
         return id;
@@ -23,19 +28,57 @@ public class Review {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+
+    public Integer getIndex() {
+        return index;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIndex(Integer index) {
+        this.index = index;
     }
 
-    public String getEmail() {
-        return email;
+
+    public String getComment() {
+        return comment;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+
+    public String getClient() {
+        return client;
+    }
+
+    public void setClient(String client) {
+        this.client = client;
+    }
+
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
+
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
