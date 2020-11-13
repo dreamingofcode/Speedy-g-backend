@@ -1,6 +1,6 @@
-package com.example.demo.repositories;
+package com.speedy.backend.repositories;
 
-import com.example.demo.models.Review;
+import com.speedy.backend.models.Review;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ReviewRepository extends CrudRepository<Review, Integer> {

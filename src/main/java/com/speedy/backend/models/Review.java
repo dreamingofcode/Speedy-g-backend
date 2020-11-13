@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.speedy.backend.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,10 +15,20 @@ public class Review {
     private Integer index;
     private String comment;
     private String client;
-    private Date date;
+    private String date;
     private Integer rating;
     private String location;
 
+    ///WHY DO WE NOT USE CONSTRUCTORS >?  is the resource/controller handling this for us?
+//    public Review() {
+//        this.id = id;
+//        this.index = index;
+//        this.comment = comment;
+//        this.client = client;
+//        this.date = date;
+//        this.rating = rating;
+//        this.location = location;
+//    }
 
     public Integer getId() {
         return id;
@@ -56,11 +66,11 @@ public class Review {
     }
 
 
-    public Date getDate() {
+    public  String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -81,4 +91,17 @@ public class Review {
     public void setLocation(String location) {
         this.location = location;
     }
+
+//    @Override
+//    public String toString() {
+//        return "Review{" +
+//                "id=" + id +
+//                ", index=" + index +
+//                ", comment='" + comment + '\'' +
+//                ", client='" + client + '\'' +
+//                ", date=" + date +
+//                ", rating=" + rating +
+//                ", location='" + location + '\'' +
+//                '}';
+//    }
 }
